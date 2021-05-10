@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WebStudio-Portfolio</title>
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
@@ -13,25 +17,29 @@
   </head>
   <body>
     <!--Шапка-->
-    <header class="header">
-      <a lang="en" href="./index.html" class="logo link"><span class="logo-accent">Web</span>Studio</a>
-      <nav>
-        <ul class="list">
-          <li>
-            <a href="./index.html" class="nav link current-page">Студия</a>
-          </li>
-          <li>
-            <a href="./portfolio.html" class="nav link">Портфолио</a>
-          </li>
-          <li>
-            <a href="#" class="nav link">Контакты </a>
-          </li>
+    <header class="page-header">
+      <div class="container">
+        <a lang="en" href="./index.html" class="logo link"
+          ><span class="logo-accent">Web</span>Studio</a
+        >
+        <nav>
+          <ul class="nav-list list">
+            <li>
+              <a href="./index.html" class="nav link">Студия</a>
+            </li>
+            <li>
+              <a href="./portfolio.html" class="nav link current-page">Портфолио</a>
+            </li>
+            <li>
+              <a href="#" class="nav link">Контакты </a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="header-addr-list list">
+          <li><a href="mailto:info@devstudio.com" class="addr link">info@devstudio.com</a></li>
+          <li><a href="tel:+380961111111" class="addr link">+38 096 111 11 11</a></li>
         </ul>
-      </nav>
-      <ul class="list">
-        <li><a href="mailto:info@devstudio.com" class="addr link">info@devstudio.com</a></li>
-        <li><a href="tel:+380961111111" class="addr link">+38 096 111 11 11</a></li>
-      </ul>
+      </div>
     </header>
 
     <main>
@@ -164,8 +172,10 @@
       </section>
     </main>
     <!--Подвал-->
-    <footer class="footer">
-      <a lang="en" href="./index.html" class="logo link"><span class="logo-accent">Web</span>Studio</a>
+    <footer class="page-footer">
+      <a lang="en" href="./index.html" class="logo link"
+        ><span class="logo-accent">Web</span>Studio</a
+      >
       <address>
         <ul class="list">
           <li><a href="" class="real-address addr link">г. Киев, пр-т Леси Украинки, 26</a></li>

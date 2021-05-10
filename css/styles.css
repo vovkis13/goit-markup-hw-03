@@ -9,10 +9,30 @@
   --primary-bg-color: #2f303a;
 }
 /*=============Common====================*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Остальной код */
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--secondary-text-color);
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+
 .list {
   list-style: none;
 }
@@ -24,45 +44,97 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section-title {
+  margin-bottom: 50px;
+  
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
 /*=============Header====================*/
+.page-header {
+  border: 1px solid #ececec;
+}
+.page-header .container {
+  display: flex;
+  align-items: center;
 
+  height: 80px;
+}
 .logo {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
- }
-.header .logo {
+}
+.page-header .logo {
+  margin-right: 93px;
+
   color: var(--black-text-color);
 }
 .logo-accent {
   color: var(--accent-text-color);
 }
 .nav {
+  padding-top: 32px;
+  padding-bottom: 32px;
+  margin-right: 50px;
+
   color: var(--primary-text-color);
 }
 .nav:hover,
 .nav:focus {
   color: var(--accent-text-color);
 }
+.nav-list {
+  display: flex;
+}
+
 .current-page {
   color: var(--accent-text-color);
 }
 .addr {
+  display: inline-block;
+
   color: var(--secondary-text-color);
 }
 .addr:hover,
 .addr:focus {
   color: var(--accent-text-color);
 }
-
+.header-addr-list {
+  display: flex;
+  margin-left: auto;
+}
+.header-addr-list .addr {
+  margin-left: 50px;
+}
 
 /*=============Hero====================*/
 .hero {
+  text-align: center;
   background-color: var(--primary-bg-color);
 }
+
 .hero-title {
+  width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -73,6 +145,11 @@ body {
 }
 
 .hero-button {
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 32px;
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -83,8 +160,6 @@ body {
   background-color: var(--accent-text-color);
 
   cursor: pointer;
-
-  border: none;
 }
 .hero-button:hover,
 .hero-button:focus {
@@ -92,14 +167,24 @@ body {
 }
 
 /*=============Advantages====================*/
+.advantages-list {
+  display: flex;
+}
+.advantages-list-item {
+  height: 101px;
+}
+.advantages-list-item:not(:last-child) {
+  margin-right: 30px;
+}
 
-.advantage {
+.advantages-title {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: var(--primary-text-color);
 }
 
@@ -109,15 +194,21 @@ body {
   letter-spacing: 0.03em;
 }
 /*=============Spheres====================*/
-.section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
+.spheres-list {
+  display: flex;
 }
+.spheres-list-item:not(:last-child) {
+  margin-right: 30px;
+} 
+
+
 /*=============Team====================*/
+.team-list {
+  display: flex;
+}
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
+} 
 .teammate {
   font-weight: 500;
   font-size: 16px;
@@ -169,11 +260,16 @@ body {
 }
 
 /*==============footer=============*/
-.footer {
+.page-footer {
   background-color: var(--primary-bg-color);
+  height: 252px;
 }
 
-.footer .logo {
+.page-footer .logo {
+  display: inline-block;
+  margin-top: 60px;
+  margin-bottom: 20px;
+
   color: var(--white-text-color);
 }
 
@@ -188,6 +284,9 @@ body {
 
 .email,
 .phone {
+  display: inline-block;
+  margin-top: 9px; 
+
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -195,4 +294,6 @@ body {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
+
+
 /*====================================*/
