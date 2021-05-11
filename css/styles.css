@@ -23,13 +23,24 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p,
 ul {
   margin: 0px;
   padding: 0px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .list {
@@ -163,10 +174,14 @@ ul {
 }
 
 /*=============Advantages====================*/
+.advantages {
+  padding-bottom: 0px;
+}
 .advantages-list {
   display: flex;
 }
 .advantages-list-item {
+  width: 270px;
   height: 101px;
 }
 .advantages-list-item:not(:last-child) {
@@ -317,5 +332,4 @@ ul {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-
 /*====================================*/
