@@ -9,13 +9,7 @@
   --primary-bg-color: #2f303a;
 }
 /*=============Common====================*/
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
 
-/* Остальной код */
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--secondary-text-color);
@@ -25,8 +19,12 @@ h2,
 h3,
 p,
 ul {
-  margin: 0px;
-  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-left: 0px;
+}
+img {
+  display: block;
 }
 
 .visually-hidden {
@@ -36,7 +34,7 @@ ul {
   margin: -1px;
   border: 0;
   padding: 0;
-  
+
   white-space: nowrap;
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
@@ -75,12 +73,11 @@ ul {
 }
 /*=============Header====================*/
 .page-header {
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 .page-header .container {
   display: flex;
   align-items: center;
-
   height: 80px;
 }
 .logo {
@@ -98,16 +95,18 @@ ul {
   color: var(--accent-text-color);
 }
 .nav {
-  margin-right: 50px;
-
   color: var(--primary-text-color);
 }
+
 .nav:hover,
 .nav:focus {
   color: var(--accent-text-color);
 }
 .nav-list {
   display: flex;
+}
+.nav-item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .current-page {
@@ -126,13 +125,14 @@ ul {
   display: flex;
   margin-left: auto;
 }
-.header-addr-list .addr {
+.header-addr-item:not(:first-child) {
   margin-left: 50px;
 }
 
 /*=============Hero====================*/
 .hero {
   text-align: center;
+
   background-color: var(--primary-bg-color);
 }
 
@@ -175,7 +175,7 @@ ul {
 
 /*=============Advantages====================*/
 .advantages {
-  padding-bottom: 0px;
+  padding-bottom: 47px;
 }
 .advantages-list {
   display: flex;
@@ -205,6 +205,9 @@ ul {
   letter-spacing: 0.03em;
 }
 /*=============Spheres====================*/
+.spheres {
+  padding-top: 47px;
+}
 .spheres-list {
   display: flex;
 }
@@ -277,9 +280,9 @@ ul {
   margin-top: 50px;
 }
 .works-list-item {
-  width: 370px;
+  width: calc((100% - 90px) / 3);
   margin: 15px;
-  border: 1px solid #EEEEEE;
+  border: 1px solid #eeeeee;
 }
 .portfolio-title {
   margin-top: 20px;
@@ -294,8 +297,8 @@ ul {
 
 .portfolio-description {
   margin-top: 4px;
-  margin-bottom: 20px;
   margin-left: 24px;
+  margin-bottom: 20px;
 
   font-size: 16px;
   line-height: 1.87;
