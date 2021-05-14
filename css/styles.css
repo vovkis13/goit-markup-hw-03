@@ -218,6 +218,9 @@ img {
 }
 
 /*=============Team====================*/
+.team {
+  background-color: #f5f4fa;
+}
 .team-list {
   display: flex;
   flex-wrap: wrap;
@@ -339,7 +342,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--white-text-color);
 }
-
+ 
 .email,
 .phone {
   display: inline-block;
